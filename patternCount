@@ -1,0 +1,16 @@
+# Author: Tray Bridgewater
+# What does this program do? 
+# Extremely simple function that scans a string for repeated sub-strings.
+# Developed specifically to track down repeated patterns in nucleotide strings. 
+
+def patternCount(text, pattern):
+  count = 0
+  current_int = 0
+  for i in text:
+    if text[current_int:current_int+len(pattern)] == pattern:
+      count = count + 1
+    current_int = current_int+1
+  return count
+
+# Test cases:
+print(patternCount("CGATATATCCATAG", "ATA"))
